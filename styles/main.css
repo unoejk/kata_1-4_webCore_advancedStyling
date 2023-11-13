@@ -56,17 +56,17 @@ p+p{
 a:hover{
     color: #8d2343;
 }
-a,a:hover{
-    transition: color .1s ease-in-out;
+a{
+    transition: color .3s ease-in-out;
 }
 
 
 /*----------------noRepeat*/
-.theBtn{
+.roundButton{
     display: flex;
     align-items: center;
 }
-.theBtn__text{
+.roundButton__text{
     color: #1B1C21;
     font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
@@ -75,15 +75,16 @@ a,a:hover{
     line-height: 24px; /* 150% */
     letter-spacing: -0.2px;
 }
-.theBtn__svg{
+.roundButton__svg{
     display: block;
     fill: black;
+    transition: fill .3s ease-in-out;
 }
-.theBtn__svg:hover>path{
+.roundButton__svg:hover>path{
     fill: #8d2343;
 }
-.theBtn__svg>rect,.theBtn__svg:hover>path{
-    transition: fill .1s ease-in-out;
+.roundButton__svg>path{
+    transition: fill .3s ease-in-out;
 }
 
 .roundButtonsList{
@@ -98,9 +99,29 @@ a,a:hover{
 .roundButtonsList__btn:focus{
     outline: 4px solid #B8FFEC;
 }
-.roundButtonsList__imgLogo{
+
+.roundButtonsList__logoLink{
+    display: block;
+    background-image: url("../img/logoSvg.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
     height: 50px;
+    width: 100px;
+    border-radius: 6px;
+    transition: opacity .3s ease-in-out;
 }
+/*.roundButtonsList__logoLink:before{*/
+/*    content: url("../img/logoSvg.svg");*/
+/*    height: 100%;*/
+/*}*/
+.roundButtonsList__logoLink:focus{
+    outline: 4px solid #B8FFEC;
+}
+.roundButtonsList__logoLink:hover{
+    opacity: .8;
+}
+
 
 
 /*----------------sideBar*/
@@ -193,9 +214,6 @@ a,a:hover{
     position: absolute;
     left: 0;
 }
-.sbContent__link--isActive:before>path{
-
-}
 
 .title-block__highlight-svg{
     width: 4px;
@@ -273,8 +291,8 @@ a,a:hover{
 .sbFooter__languagesButton:hover{
     color: #8d2343;
 }
-.sbFooter__languagesButton,.sbFooter__languagesButton:hover{
-    transition: color .1s ease-in-out;
+.sbFooter__languagesButton{
+    transition: color .3s ease-in-out;
 }
 .sbFooter__languagesButton--isActive{
     color: #7E7E82;
